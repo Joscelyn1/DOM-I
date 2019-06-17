@@ -1,9 +1,6 @@
 
 /* Timer */
 
-
-/* Timer */
-
 let msTensElement = document.getElementById('msTens');
 let msHundredsElement = document.getElementById('msHundreds');
 let secondOnesElement = document.getElementById('secondOnes');
@@ -41,3 +38,5 @@ function timer() {
 }
 
 const clock = setInterval(timer, 10);
+
+
