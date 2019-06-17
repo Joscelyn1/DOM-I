@@ -56,12 +56,26 @@ navLinks[3].textContent = siteContent['nav']['nav-item-4'];
 navLinks[4].textContent = siteContent['nav']['nav-item-5'];
 navLinks[5].textContent = siteContent['nav']['nav-item-6'];
 
-navLinks.forEach(function(currentValue){
-  currentValue.style.color = 'green';
-})
 
+
+const nav = document.querySelector('nav');
+const newATag = document.createElement('a');
+const otherNewATag = document.createElement('a');
+const resourcesText = document.createTextNode('Resources');
+const extrasText = document.createTextNode('Extras');
+
+newATag.appendChild(resourcesText);
+nav.appendChild(newATag);
+
+otherNewATag.appendChild(extrasText);
+nav.appendChild(otherNewATag);
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent['cta']['h1'];
+
+
+navLinks.forEach((currentValue) => {
+  currentValue.style.color = 'green';
+})
 
 
 const button = document.querySelector('button');
