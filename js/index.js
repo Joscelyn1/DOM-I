@@ -85,6 +85,13 @@ h1.textContent = siteContent['cta']['h1'];
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 
+button.addEventListener('click', (event) => {
+  allNavLinks.forEach((link) => {
+    link.style.color = 'blue';
+  })
+})
+
+
 const h4s = document.querySelectorAll('h4');
 h4s[0].textContent = siteContent['main-content']['features-h4'];
 h4s[1].textContent = siteContent['main-content']['about-h4'];
@@ -106,3 +113,4 @@ ps[6].textContent = siteContent['contact']['phone'];
 ps[7].textContent = siteContent['contact']['email'];
 
 ps[8].textContent = siteContent['footer']['copyright'];
+
