@@ -48,16 +48,21 @@ codePic.setAttribute('src', siteContent["cta"]["img-src"]);
 const midImage = document.getElementById("middle-img");
 midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-const navLinks = document.querySelector('nav').children;
+const navLinks = document.querySelectorAll('nav a');
 navLinks[0].textContent = siteContent['nav']['nav-item-1'];
 navLinks[1].textContent = siteContent['nav']['nav-item-2'];
 navLinks[2].textContent = siteContent['nav']['nav-item-3'];
 navLinks[3].textContent = siteContent['nav']['nav-item-4'];
 navLinks[4].textContent = siteContent['nav']['nav-item-5'];
-navLinks[4].textContent = siteContent['nav']['nav-item-6'];
+navLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+navLinks.forEach(function(currentValue){
+  currentValue.style.color = 'green';
+})
 
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent['cta']['h1'];
+
 
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
