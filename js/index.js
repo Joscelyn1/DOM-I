@@ -48,3 +48,12 @@ codePic.setAttribute('src', siteContent["cta"]["img-src"]);
 let midImage = document.getElementById("middle-img");
 midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let navLinks = document.querySelector('nav').children;
+navLinks[0].textContent = siteContent['nav']['nav-item-1'];
+navLinks[1].textContent = siteContent['nav']['nav-item-2'];
+navLinks[2].textContent = siteContent['nav']['nav-item-3'];
+navLinks[3].textContent = siteContent['nav']['nav-item-4'];
+navLinks[4].textContent = siteContent['nav']['nav-item-5'];
+navLinks[4].textContent = siteContent['nav']['nav-item-6'];
+
+
