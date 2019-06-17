@@ -69,13 +69,17 @@ nav.appendChild(newATag);
 
 otherNewATag.appendChild(extrasText);
 nav.appendChild(otherNewATag);
+
+const allNavLinks = document.querySelectorAll('nav a');
+
+allNavLinks.forEach((link) => {
+  link.style.color = 'green';
+})
+
+
+
 const h1 = document.querySelector('h1');
 h1.textContent = siteContent['cta']['h1'];
-
-
-navLinks.forEach((currentValue) => {
-  currentValue.style.color = 'green';
-})
 
 
 const button = document.querySelector('button');
