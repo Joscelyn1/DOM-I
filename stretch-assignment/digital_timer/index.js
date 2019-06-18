@@ -1,12 +1,16 @@
 /* Timer */
 
+/* digit elements */
 let msTensElement = document.getElementById('msTens');
 let msHundredsElement = document.getElementById('msHundreds');
 let secondOnesElement = document.getElementById('secondOnes');
 let secondTensElement = document.getElementById('secondTens');
 
-let button = document.getElementById('clickMe');
+/* button elements */
+let startButton = document.getElementById('startButton');
+let resetButton = document.getElementById('resetButton');
 
+/* time variables */
 let msTens = 0;
 let msHundreds = 0;
 let seconds = 0;
@@ -30,6 +34,8 @@ function timer() {
     if (seconds === 10) {
         msHundreds = 0;
         msTens = 0;
+        startButton.disabled = false;
+        resetButton.disabled = false;
         clearInterval(clock);
     }
 
@@ -39,11 +45,19 @@ function timer() {
 
 }
 
-
-const stop = (event) => { event.stopPropagation() };
-
-button.addEventListener('click', (event) => {
+/* event listeners */
+startButton.addEventListener('click', (event) => {
     const clock = setInterval(timer, 10);
-    button.disabled = true;
+    startButton.disabled = true;
+    resetButton.disabled = true;
+
   })
 
+resetButton.addEventListener('click', (event) => {
+    msTens = 0;
+    msHundreds = 0;
+    seconds = 0;
+    msTensElement.innerHTML = msTens;
+    msHundredsElement.innerHTML = msHundreds;
+    secondOnesElement.innerHTML = seconds;
+})
