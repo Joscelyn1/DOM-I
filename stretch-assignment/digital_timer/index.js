@@ -1,4 +1,3 @@
-
 /* Timer */
 
 let msTensElement = document.getElementById('msTens');
@@ -10,8 +9,10 @@ let secondTensElement = document.getElementById('secondTens');
 let msTens = 0;
 let msHundreds = 0;
 let seconds = 0;
+
+
 function timer() {
-    
+
     msTens++;
 
     if (msTens === 10) {
@@ -26,8 +27,8 @@ function timer() {
     }
 
     if (seconds === 10) {
-      msHundreds = 0;
-      msTens = 0;
+        msHundreds = 0;
+        msTens = 0;
         clearInterval(clock);
     }
 
@@ -38,5 +39,3 @@ function timer() {
 }
 
 const clock = setInterval(timer, 10);
-
-
