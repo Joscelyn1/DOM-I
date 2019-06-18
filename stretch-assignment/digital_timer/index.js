@@ -5,6 +5,7 @@ let msHundredsElement = document.getElementById('msHundreds');
 let secondOnesElement = document.getElementById('secondOnes');
 let secondTensElement = document.getElementById('secondTens');
 
+let button = document.getElementById('clickMe');
 
 let msTens = 0;
 let msHundreds = 0;
@@ -38,4 +39,11 @@ function timer() {
 
 }
 
-const clock = setInterval(timer, 10);
+
+const stop = (event) => { event.stopPropagation() };
+
+button.addEventListener('click', (event) => {
+    const clock = setInterval(timer, 10);
+    button.disabled = true;
+  })
+
